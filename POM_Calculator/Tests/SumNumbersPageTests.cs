@@ -35,17 +35,32 @@ namespace WebDriverCalculatorPOM.Tests
         {
 
             page.CalculateNumbers("4", "+", "5");
-            Assert.That(page.ResultLabel.Text, Is.EqualTo("Result: 9"));
+            var actualResult = page.ResultLabel.Text;
+            Assert.That(actualResult, Is.EqualTo("Result: 9"));
 
 
         }
 
         [Test]
-        public void Test_MultiplyNumbersPage_SumTwoPositiveNumbers()
+        public void Test_SumNumbersPage_MultiplyPositiveNumbers()
         {
 
-            page.CalculateNumbers("4", "*", "5");
-            Assert.That(page.ResultLabel.Text, Is.EqualTo("Result: 20"));
+            var actualReasult = page.CalculateNumbers("4", "*", "5");
+         
+            Assert.That(actualReasult, Is.EqualTo("Result: 20"));
+
+
+        }
+
+        [TestCase("3", "*", "5", "Result: 15")]
+        [TestCase("2", "*", "5", "Result: 10")]
+        public void Test_SumNumbersPage_MultiplyTwoPositiveNumbers(string firstValue, string operation, string secondValue, string result)
+        {
+
+            var actualReasult = page.CalculateNumbers(firstValue, operation, secondValue);
+            
+            
+            Assert.That(actualReasult, Is.EqualTo(result));
 
 
         }
