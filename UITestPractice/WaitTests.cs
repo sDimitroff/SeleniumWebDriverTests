@@ -48,12 +48,14 @@ namespace UITestPractice
 
             driver.Navigate().Refresh();
            
-            AjaxLink = driver.FindElement(By.PartialLinkText("Ajax link"));
+            
             AjaxLink.Click();
        
             textElement = driver.FindElement(By.ClassName("ContactUs"));
             
             Assert.IsTrue(textElement.Displayed);
+
+           
         }
 
         [Test]
