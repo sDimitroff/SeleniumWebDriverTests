@@ -58,7 +58,7 @@ namespace SeleniumWebDriverTest
            var deutschLink = allStrongElements[4].Text;
             
             //Assertion
-            Assert.That(deutschLink, Is.EqualTo("Deutsch"));
+            Assert.That(deutschLink, Is.EqualTo("Русский"));
 
            
 
