@@ -23,7 +23,7 @@ namespace WebDriverCalculatorPOM.Tests
         [Test]
         public void Test_SumNumbersPage_CheckTitle()
         {
-
+            
 
             Assert.That(page.GetPageTitle(), Is.EqualTo("Number Calculator"));
 

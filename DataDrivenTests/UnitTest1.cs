@@ -43,7 +43,7 @@ namespace DataDrivenWebDriverTests
             var resetButton = driver.FindElement(By.Id("resetButton"));
             var resultField = driver.FindElement(By.Id("result"));
 
-
+            
 
             resetButton.Click();
             firstNumberInput.SendKeys(num1);

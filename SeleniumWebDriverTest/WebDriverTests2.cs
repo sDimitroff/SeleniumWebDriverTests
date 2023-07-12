@@ -45,7 +45,7 @@ namespace SeleniumWebDriverTest
         }
 
         [Test]
-        public void Test_Wikipedia_CheckDeutschLinkName()
+        public void Test_Wikipedia_CheckRussianLinkName()
         {
             //Arrange
             //driver.Navigate().GoToUrl("https://wikipedia.org");
@@ -55,10 +55,10 @@ namespace SeleniumWebDriverTest
             //Get by TagName 
            var allStrongElements = driver.FindElements(By.TagName("Strong"));
 
-           var deutschLink = allStrongElements[4].Text;
+           var russianLink = allStrongElements[4].Text;
             
             //Assertion
-            Assert.That(deutschLink, Is.EqualTo("Русский"));
+            Assert.That(russianLink, Is.EqualTo("Русский"));
 
            
 
