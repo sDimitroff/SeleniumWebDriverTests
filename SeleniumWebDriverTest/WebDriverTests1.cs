@@ -14,8 +14,8 @@ namespace SeleniumWebDriverTest
         [SetUp]
         public void Setup()
         {
+            driver.Manage().Window.Maximize();
 
-           
         }
 
         [TearDown]
@@ -28,7 +28,7 @@ namespace SeleniumWebDriverTest
         public void Test_Wikipedia_CheckTitleChrome()
         {
             driver = new ChromeDriver();
-            driver.Manage().Window.Maximize();
+            
 
             driver.Url = "https://wikipedia.org";
 
@@ -41,7 +41,7 @@ namespace SeleniumWebDriverTest
         public void Test_Wikipedia_CheckTitle_FireFox()
         {
             driver = new FirefoxDriver();
-            driver.Manage().Window.Maximize();
+            
 
             driver.Url = "https://wikipedia.org";
 
@@ -53,7 +53,7 @@ namespace SeleniumWebDriverTest
         public void Test_Wikipedia_CheckTitle_Edge()
         {
             driver = new EdgeDriver();
-            driver.Manage().Window.Maximize();
+           
 
             driver.Url = "https://wikipedia.org";
             Task.Delay(3000).Wait();
